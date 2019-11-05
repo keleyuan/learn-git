@@ -14,3 +14,7 @@ touch README.md             #创建一个空的名为 README.md 的文件
 code README.md              #用 VSCode 打开这个空的文件
 git add README.md           #有变化的文件加入待提交的“暂存区域（staging area）”对 untracked files 它具有双重功效，先将其加入到版本管理中（从 untracked 变成 tracked），再加入 staging area
 git commit                   #在 staging area 的任何文件变化到版本仓库
+git checkout --README.md    #git checkout 从版本仓库中取得一个文件的指定版本，然后覆盖到工作目录中。命令后面可以指定一个 commit id，上面我们用 -- 就表示从仓库里最新的一个 commit 中取，最后是要取出的文件路径（当前目录下 README.md 文件）。运行上面的命令会废弃掉（discard）刚才对 README.md 做的修改
+git add .           # 将当前目录及其下面变化的所有文件都加入到 staging area 
+git reset HEAD README.md  #从 staging area 移出来
+git restore --staged README.md  #同上变为unstaging
