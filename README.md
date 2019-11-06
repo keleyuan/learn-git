@@ -18,3 +18,10 @@ git checkout --README.md    #git checkout 从版本仓库中取得一个文件�
 git add .           # 将当前目录及其下面变化的所有文件都加入到 staging area 
 git reset HEAD README.md  #从 staging area 移出来
 git restore --staged README.md  #同上变为unstaging
+git log                         #看版本的历史记录,从新到旧排列
+git checkout 7451a00            #回到了你最初提交 README.md 一个文件的状态
+git checkout master             #回到了最新的状态
+git diff 7451a00                #比较指定 commit 和工作目录当前状态
+git diff 7451a00 5d4f3df README.md        #比较两个指定的 commit
+git clone https://github.com/keleyuan/learn-git.git #clone git内容
+git  commit -a -m "++clone"      #直接变为版本仓库
